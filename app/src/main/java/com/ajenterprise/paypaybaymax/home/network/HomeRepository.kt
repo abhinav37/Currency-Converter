@@ -9,7 +9,7 @@ import javax.inject.Inject
 
 class HomeRepository @Inject constructor(private val api: HomeApi) : HomeContract.Repository {
 
-  override suspend fun getCurrency(id: Int): CurrencyResponse? {
-        return api.getCurrency(id).await()
+  override suspend fun getCurrency(): CurrencyResponse? {
+        return api.getCurrency().await()
     }
 }

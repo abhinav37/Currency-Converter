@@ -6,7 +6,7 @@ data class CurrencyResponse(
     val privacy: String = "",
     val timestamp: Long = 1430401802,
     val source: String = "",
-    val quotes: List<CurrencyData>?
+    val quotes: Map<String, Float>?
 ) {
     data class CurrencyData(
         val name: String = "",

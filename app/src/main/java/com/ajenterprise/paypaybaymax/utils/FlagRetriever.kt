@@ -1,9 +1,126 @@
 package com.ajenterprise.paypaybaymax.utils
 
 import androidx.annotation.DrawableRes
+import androidx.annotation.StringRes
 import com.ajenterprise.paypaybaymax.R
+import javax.inject.Inject
 
-class FlagRetriever {
+class FlagRetriever @Inject constructor() {
+    @StringRes
+    fun getCurrencySymbol(currency: String): Int? {
+        return when (currency) {
+            "AFN" -> R.string.currency_afn
+            "ARS" -> R.string.currency_ars
+            "AWG" -> R.string.currency_awg
+            "AUD" -> R.string.currency_aud
+            "AZN" -> R.string.currency_azn
+            "BSD" -> R.string.currency_bsd
+            "BBD" -> R.string.currency_bbd
+            "BYN" -> R.string.currency_byn
+            "BZD" -> R.string.currency_bzd
+            "BMD" -> R.string.currency_bmd
+            "BOB" -> R.string.currency_bob
+            "BAM" -> R.string.currency_bam
+            "BWP" -> R.string.currency_bwp
+            "BGN" -> R.string.currency_bgn
+            "BRL" -> R.string.currency_brl
+            "BND" -> R.string.currency_bnd
+            "KHR" -> R.string.currency_khr
+            "CAD" -> R.string.currency_cad
+            "KYD" -> R.string.currency_kyd
+            "CLP" -> R.string.currency_clp
+            "CNY" -> R.string.currency_cny
+            "COP" -> R.string.currency_cop
+            "CRC" -> R.string.currency_crc
+            "HRK" -> R.string.currency_hrk
+            "CUP" -> R.string.currency_cup
+            "CZK" -> R.string.currency_czk
+            "DKK" -> R.string.currency_dkk
+            "DOP" -> R.string.currency_dop
+            "XCD" -> R.string.currency_xcd
+            "EGP" -> R.string.currency_egp
+            "SVC" -> R.string.currency_svc
+            "EUR" -> R.string.currency_eur
+            "FKP" -> R.string.currency_fkp
+            "FJD" -> R.string.currency_fjd
+            "GHS" -> R.string.currency_ghs
+            "GIP" -> R.string.currency_gip
+            "GTQ" -> R.string.currency_gtq
+            "GGP" -> R.string.currency_ggp
+            "GYD" -> R.string.currency_gyd
+            "HNL" -> R.string.currency_hnl
+            "HKD" -> R.string.currency_hkd
+            "HUF" -> R.string.currency_huf
+            "ISK" -> R.string.currency_isk
+            "INR" -> R.string.currency_inr
+            "IDR" -> R.string.currency_idr
+            "IRR" -> R.string.currency_irr
+            "IMP" -> R.string.currency_imp
+            "ILS" -> R.string.currency_ils
+            "JMD" -> R.string.currency_jmd
+            "JPY" -> R.string.currency_jpy
+            "JEP" -> R.string.currency_jep
+            "KZT" -> R.string.currency_kzt
+            "KPW" -> R.string.currency_kpw
+            "KRW" -> R.string.currency_krw
+            "KGS" -> R.string.currency_kgs
+            "LAK" -> R.string.currency_lak
+            "LBP" -> R.string.currency_lbp
+            "LRD" -> R.string.currency_lrd
+            "MKD" -> R.string.currency_mkd
+            "MYR" -> R.string.currency_myr
+            "MUR" -> R.string.currency_mur
+            "MXN" -> R.string.currency_mxn
+            "MNT" -> R.string.currency_mnt
+            "MZN" -> R.string.currency_mzn
+            "NAD" -> R.string.currency_nad
+            "NPR" -> R.string.currency_npr
+            "ANG" -> R.string.currency_ang
+            "NZD" -> R.string.currency_nzd
+            "NIO" -> R.string.currency_nio
+            "NGN" -> R.string.currency_ngn
+            "NOK" -> R.string.currency_nok
+            "OMR" -> R.string.currency_omr
+            "PKR" -> R.string.currency_pkr
+            "PAB" -> R.string.currency_pab
+            "PYG" -> R.string.currency_pyg
+            "PEN" -> R.string.currency_pen
+            "PHP" -> R.string.currency_php
+            "PLN" -> R.string.currency_pln
+            "QAR" -> R.string.currency_qar
+            "RON" -> R.string.currency_ron
+            "RUB" -> R.string.currency_rub
+            "SHP" -> R.string.currency_shp
+            "SAR" -> R.string.currency_sar
+            "RSD" -> R.string.currency_rsd
+            "SCR" -> R.string.currency_scr
+            "SGD" -> R.string.currency_sgd
+            "SBD" -> R.string.currency_sbd
+            "SOS" -> R.string.currency_sos
+            "ZAR" -> R.string.currency_zar
+            "LKR" -> R.string.currency_lkr
+            "SEK" -> R.string.currency_sek
+            "CHF" -> R.string.currency_chf
+            "SRD" -> R.string.currency_srd
+            "SYP" -> R.string.currency_syp
+            "TWD" -> R.string.currency_twd
+            "THB" -> R.string.currency_thb
+            "TTD" -> R.string.currency_ttd
+            "TRY" -> R.string.currency_try
+            "TVD" -> R.string.currency_tvd
+            "UAH" -> R.string.currency_uah
+            "GBP" -> R.string.currency_gbp
+            "USD" -> R.string.currency_usd
+            "UYU" -> R.string.currency_uyu
+            "UZS" -> R.string.currency_uzs
+            "VEF" -> R.string.currency_vef
+            "VND" -> R.string.currency_vnd
+            "YER" -> R.string.currency_yer
+            "ZWD" -> R.string.currency_zwd
+            else -> null
+        }
+    }
+
     @DrawableRes
     fun getDrawable(currency: String): Int {
         return when (currency) {
@@ -33,7 +150,6 @@ class FlagRetriever {
             "BZD" -> R.drawable.bz
             "CAD" -> R.drawable.ca
             "CDF" -> R.drawable.cd
-            "CDF" -> R.drawable.cd
             "CHF" -> R.drawable.ch
             "CLP" -> R.drawable.cl
             "CNY" -> R.drawable.cn
@@ -50,7 +166,6 @@ class FlagRetriever {
             "ECS" -> R.drawable.ec
             "EEK" -> R.drawable.ee
             "EGP" -> R.drawable.eg
-            "ETB" -> R.drawable.er
             "ETB" -> R.drawable.et
             "EUR" -> R.drawable.eu
             "FJD" -> R.drawable.fj
@@ -71,7 +186,6 @@ class FlagRetriever {
             "HUF" -> R.drawable.hu
             "IDR" -> R.drawable.id
             "ILS" -> R.drawable.il
-            "INR" -> R.drawable.bt
             "INR" -> R.drawable.inr
             "IQD" -> R.drawable.iq
             "IRR" -> R.drawable.ir
