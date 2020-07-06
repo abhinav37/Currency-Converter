@@ -14,6 +14,7 @@ import com.ajenterprise.currencyconvertor.utils.DispatchersFactory
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
+import java.text.DecimalFormat
 
 @Module(includes = [HomeModule.ToastModule::class])
 interface HomeModule {
@@ -53,5 +54,12 @@ interface HomeModule {
         fun provideListLayoutManager(view: View): LinearLayoutManager =
             LinearLayoutManager(view.context)
 
+        @Provides
+        fun provideDecimalFormatter(): DecimalFormat = DecimalFormat(PATTERN)
+
+        companion object {
+            private const val PATTERN = "##,###,###,###"
+        }
     }
+
 }

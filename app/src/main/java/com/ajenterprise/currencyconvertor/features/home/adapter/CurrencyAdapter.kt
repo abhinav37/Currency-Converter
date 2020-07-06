@@ -15,7 +15,10 @@ import kotlinx.android.synthetic.main.layout_item_currency_list.view.currency
 import java.text.DecimalFormat
 import javax.inject.Inject
 
-class CurrencyAdapter @Inject constructor(private val flagRetriever: FlagRetriever) :
+class CurrencyAdapter @Inject constructor(
+    private val flagRetriever: FlagRetriever,
+    private val formatter: DecimalFormat
+) :
     RecyclerView.Adapter<CurrencyViewHolder>() {
     private var currencyList: List<CurrencyRate> = emptyList()
     private var viewType: ListViewType =
@@ -24,7 +27,6 @@ class CurrencyAdapter @Inject constructor(private val flagRetriever: FlagRetriev
         BASE_CURRENT_RATE
     private var conversionRate: Float =
         BASE_CONVERSION_RATE
-    private var formatter = DecimalFormat(PATTERN)
 
     fun setCurrentRate(currentRate: Float) {
         this.currentRate = currentRate
@@ -92,7 +94,6 @@ class CurrencyAdapter @Inject constructor(private val flagRetriever: FlagRetriev
         private const val BASE_LONG_CONVERSION = 1000
         private const val BASE_CURRENT_RATE = 1f
         private const val BASE_CONVERSION_RATE = 1f
-        private const val PATTERN = "#,###,###"
     }
 }
 

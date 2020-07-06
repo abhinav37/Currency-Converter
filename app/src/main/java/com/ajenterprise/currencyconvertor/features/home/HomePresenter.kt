@@ -10,6 +10,7 @@ import kotlinx.coroutines.CancellationException
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.MainScope
 import kotlinx.coroutines.cancel
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import javax.inject.Inject
@@ -28,6 +29,15 @@ class HomePresenter @Inject constructor(
     override fun onCreateActivity() {
         viewProxy.setup(this::fetchAndPopulate, this::onItemChange)
         fetchAndPopulate()
+        updateTimer()
+    }
+
+    private fun updateTimer() {
+        launch {
+            delay(DELAY_TIME)
+            fetchAndPopulate()
+            updateTimer()
+        }
     }
 
     @VisibleForTesting
@@ -43,7 +53,7 @@ class HomePresenter @Inject constructor(
             viewProxy.showLoading()
             val timestamp = System.currentTimeMillis()
             val latestDataTimestamp = getLatestTimeStamp()
-            val list = if (timestamp > latestDataTimestamp + 1800000) {
+            val list = if (timestamp > latestDataTimestamp + DELAY_TIME) {
                 // Get Local data if network fails
                 getRemoteCurrencyRates()?.apply {
                     setCurrentRates(this)
@@ -141,5 +151,6 @@ class HomePresenter @Inject constructor(
     companion object {
         const val SELECTED_POSITION = "selected_position"
         const val VIEW_TYPE = "view_type"
+        const val DELAY_TIME = 1_800_000L
     }
 }
