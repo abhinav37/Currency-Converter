@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".features.home.HomeActivity">
+    android:background="@color/main_background"
+    tools:context="com.ajenterprise.currencyconvertor.features.home.HomeActivity">
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -39,6 +40,7 @@
                 android:hint="@string/input_hint"
                 android:inputType="numberSigned"
                 android:maxLength="@integer/max_input_length"
+                android:padding="@dimen/spacing_medium"
                 android:textColor="@color/white"
                 android:textColorHint="@color/transparent_white"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -49,7 +51,7 @@
 
             <Spinner
                 android:id="@+id/currency_spinner"
-                android:layout_width="0dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
                 android:textColor="@color/white"
@@ -63,8 +65,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/white"
-                android:src="@drawable/grid_icon"
-                android:text=""
+                android:src="@drawable/list_icon"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toEndOf="@id/currency_spinner"
@@ -117,6 +118,8 @@
         android:layout_height="match_parent"
         android:layout_gravity="fill_vertical|center_horizontal"
         android:maxWidth="@dimen/home_max_width"
+        android:paddingStart="@dimen/spacing_small"
+        android:paddingEnd="@dimen/spacing_small"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
         <androidx.recyclerview.widget.RecyclerView

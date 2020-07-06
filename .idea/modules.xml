@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/PayPay.iml" filepath="$PROJECT_DIR$/.idea/PayPay.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Paypaybaymax.iml" filepath="$PROJECT_DIR$/.idea/modules/Paypaybaymax.iml" group="Paypaybaymax" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="Paypaybaymax/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/app.iml" group="currencyconvertor/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/currencyconvertor.iml" filepath="$PROJECT_DIR$/.idea/modules/currencyconvertor.iml" group="currencyconvertor" />
     </modules>
   </component>
 </project>

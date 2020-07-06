@@ -3,8 +3,11 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="card_background">#FFFFFF</color>
     <color name="white">#FFF</color>
     <color name="black">#000</color>
     <color name="transparent_white">#AFFF</color>
+    <color name="currency_text_color">#333333</color>
+    <color name="main_background">#FBFBFB</color>
 
 </resources>

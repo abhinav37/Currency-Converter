@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Paypaybaymax</string>
+    <string name="app_name">Currency Convertor</string>
     <string name="error_toast">Unable to Access Data Please try Again</string>
     <string name="input_hint">Input Rate:</string>
     <string name="refresh">Press to Try Again</string>
