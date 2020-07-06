@@ -6,4 +6,15 @@
     <dimen name="spacing_large">32dp</dimen>
     <dimen name="spacing_x_large">48dp</dimen>
     <dimen name="spacing_xx_large">64dp</dimen>
+
+    <dimen name="home_max_width">600dp</dimen>
+
+    <dimen name="font_small">14sp</dimen>
+    <dimen name="font_normal">18sp</dimen>
+    <dimen name="font_medium">24sp</dimen>
+    <dimen name="font_large">36dp</dimen>
+    <dimen name="font_x_large">48dp</dimen>
+    <dimen name="cardview_elevation">5dp</dimen>
+    <dimen name="cardview_radius">5dp</dimen>
+
 </resources>
